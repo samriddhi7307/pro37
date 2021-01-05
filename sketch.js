@@ -57,15 +57,19 @@ feedTime.on("value", function(data){
 currentTime = hour();
 if(currentTime == (lastFeed+1)){
 update("Playing");
-foodObj.garden();
+background(gardenimg);
+//foodObj.garden();
 }
 else if(currentTime ==(lastFeed+2)){
 update("Sleeping");
-foodObj.bedroom();
+background("#2e8a57");
+dog1.addImage(sleepimg);
+//foodObj.bedroom();
 }
 else if(currentTime>(lastFeed+2) && currentTime<=(lastFeed+4)){
 update("Bathing");
-foodObj.washroom();
+background(washroomimg);
+//foodObj.washroom();
 }
 else{
   update("Hungry");
